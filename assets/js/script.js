@@ -126,15 +126,13 @@ var writePassword = function () {
 
     console.log(passwordLetters)
 
-    
-    var randomPassword = function(){
-        for(var i=0; i < length; i++) {
-          randomPassword = randomPassword + passwordLetters[Math.floor(Math.random()*passwordLetters.length)];
-          console.log(randomPassword)
-        }
+    //randomize password order
+    var randomPassword = ""
+    for (var i = 0; i < length; i++) {
+        randomPassword = randomPassword + passwordLetters[Math.floor(Math.random() * passwordLetters.length)];
+        console.log(randomPassword);
     }
-
-    randomPassword();
+    console.log(randomPassword);
    
     passwordText.value = password;
 
